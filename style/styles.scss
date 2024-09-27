@@ -1,0 +1,66 @@
+@import 'mixins.scss';
+
+
+.container{
+    display: flex;
+    gap: 16px;
+
+    @include phone-only{
+        flex-direction: column;
+    }
+
+   
+}
+
+.block{
+    &__square {
+        @include square();
+        @include centerElement();
+        
+        cursor: pointer;
+       
+        &--Moldova{
+            background-image: url(https://www.viccon.md/upl/products/13506/MD-75x150.jpg);
+            background-size:cover;
+
+        }
+        &--Brazil{
+            background-image: url(https://flags.ro/wp-content/uploads/Steag-BRAZIL-1.png);
+            background-size: cover;
+            
+        }
+        &--Coreea{
+            background-image:url(https://flags.ro/wp-content/uploads/09-South-Corea.png);
+            background-size: cover;
+            
+        }
+        &--Portugal{
+            background-image: url(https://e-steag.ro/369-superlarge_default_2x/Portugalia.jpg);
+            background-size: cover;
+            
+        }
+        &--Jamaica{
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/640px-Flag_of_Jamaica.svg.png);
+            background-size: cover;
+        }
+        @include tableta {
+            @include square( 50px, 100px);
+        }
+        @include phone-only {
+            @include square(30px, 60px);
+        }
+    }
+
+    &__input {
+
+
+        &:checked ~.block__square{
+            opacity:50%;
+        }
+    }
+}
+.header {
+    &__style{
+    @include headerFont();
+}
+}

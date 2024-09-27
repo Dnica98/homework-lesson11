@@ -1,0 +1,66 @@
+:root {
+  --bg-color: gray;
+}
+
+.container {
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.block__square {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  height: 150px;
+  width: 200px;
+  background-color: var(--bg-color);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.block__square--Moldova {
+  background-image: url(https://www.viccon.md/upl/products/13506/MD-75x150.jpg);
+  background-size: cover;
+}
+.block__square--Brazil {
+  background-image: url(https://flags.ro/wp-content/uploads/Steag-BRAZIL-1.png);
+  background-size: cover;
+}
+.block__square--Coreea {
+  background-image: url(https://flags.ro/wp-content/uploads/09-South-Corea.png);
+  background-size: cover;
+}
+.block__square--Portugal {
+  background-image: url(https://e-steag.ro/369-superlarge_default_2x/Portugalia.jpg);
+  background-size: cover;
+}
+.block__square--Jamaica {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/640px-Flag_of_Jamaica.svg.png);
+  background-size: cover;
+}
+@media (max-width: 700px) {
+  .block__square {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    height: 150px;
+    width: 200px;
+    background-color: var(--bg-color);
+  }
+}
+.block__input:checked ~ .block__square {
+  opacity: 50%;
+}
+
+.header__style {
+  color: green;
+  text-decoration: underline;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
